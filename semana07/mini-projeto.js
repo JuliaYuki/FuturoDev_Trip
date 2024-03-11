@@ -29,7 +29,7 @@ class Produto {
   // Exercicio5
   MostrarEstoque() {
     console.log(
-      `O produto ${this.nome} custa R$${this.preco} e possui ${this.quantidade} unidades disponíveis.`
+      `O produto ${this.nome} custa R$${this.preco} e possui ${this.quantidade} unidades disponíveis.\n`
     );
   }
 
@@ -64,6 +64,12 @@ class Cliente extends Pessoa {
     this.email = email;
     this.clienteDesde = clienteDesde;
   }
+
+  MostrarDadosCliente() {
+    console.log(
+      `Dados do cliente: \nNome: ${this.nome}\nIdade: ${this.idade}\nProfissão: ${this.profissao}\nTelefone: ${this.telefone}\nEmail: ${this.email}\nCliente Desde: ${this.clienteDesde}`
+    );
+  }
 }
 
 /* #### TESTE #### */
@@ -82,4 +88,5 @@ const cliente = new Cliente(
   "email@email.com",
   "2015-03-28"
 );
-console.log(cliente);
+
+cliente.MostrarDadosCliente();
